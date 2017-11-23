@@ -1,0 +1,22 @@
+{
+  "name": "AddInfo-BUYMA",
+  "version": "1.0.1",
+  "manifest_version": 2,
+  "icons": {
+    "128": "./icon.png"
+  },
+  "description": "Add info to the BUYMA's items search result.",
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.buyma.com/r/*"],
+      "js": ["index.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    "image/favicon.png"
+  ]
+}
